@@ -1,2 +1,2 @@
 # petit_code_C
-petit code en langage
+Ce dépôt ne contient que quelques pétits code fait en langage C
