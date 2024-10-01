@@ -2,7 +2,7 @@
 #include<math.h>
 
 void car_par(int n){
-     int *pointa=&a, a=0, *pointv=&v, v, i;
+     int a=0 , *pointa= &a, v, *pointv= &v,  i;
      for(i=2; i<=n/2; i++){
         if(i*i==n){
             a=1;
