@@ -1,3 +1,5 @@
+// B.A.E
+
 #include <stdio.h>
 
 void echanger(int T[], int a, int b) {
@@ -23,6 +25,7 @@ void k_petit(int T[], int n, int k) {
 }
 
 int main() {
+    // test
     int T[10] = {10,9, 8, 7, 6, 55, 4, 33, 2, 11};
 
     k_petit(T, 10, 10);
