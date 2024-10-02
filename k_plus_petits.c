@@ -8,6 +8,8 @@ void echanger(int T[], int a, int b) {
 
 void k_petit(int T[], int n, int k) {
     int i, j, min;
+
+    // tri du tableau jusqu'à trouvé les k plus petits
     for (i = 0; i < k; i++) {
         min = i;
         for (j = i + 1; j < n; j++) {
@@ -16,18 +18,14 @@ void k_petit(int T[], int n, int k) {
             }
         }
         echanger(T, i, min);
-    }
-
-    // Print the k smallest elements after sorting
-    for (i = 0; i < k; i++) {
-        printf("%d ", T[i]);
+        printf("%d ", T[i]); // affichage du plus petit élément trouver en T[i] et la fin du tableau
     }
 }
 
 int main() {
-    int T[10] = {10,9, 8, 7, 6, 5, 4, 3, 2, 1};
+    int T[10] = {10,9, 8, 7, 6, 55, 4, 33, 2, 11};
 
-    k_petit(T, 10, 5);
+    k_petit(T, 10, 10);
 
     return 0;
 }
