@@ -1,5 +1,4 @@
 // B.A.E
-
 #include <stdio.h>
 
 void echanger(int T[], int a, int b) {
@@ -10,7 +9,6 @@ void echanger(int T[], int a, int b) {
 
 void k_petit(int T[], int n, int k) {
     int i, j, min;
-
     // tri du tableau jusqu'à trouvé les k plus petits
     for (i = 0; i < k; i++) {
         min = i;
