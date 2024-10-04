@@ -1,7 +1,7 @@
 // B.A.E
 #include <stdio.h>
 
-void echanger(int T[], int a, int b) {
+void echanger(int *T, int a, int b) {
     int tmp = T[a];
     T[a] = T[b];
     T[b] = tmp;
