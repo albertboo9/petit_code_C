@@ -31,7 +31,7 @@ int* fusion(int* T, int* L, int n){
 
 int main(){
 
-    int n = 5;
+    int n = 2;
     int *T  = (int*)malloc(2*n*sizeof(int));
     int *L  = (int*)malloc(n*sizeof(int));
     for (int i = 0; i < n; i++) {
