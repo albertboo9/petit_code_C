@@ -50,6 +50,12 @@ void insertion(Liste *liste, int nombre){
 
 // transfert des éléments d'un vecteur vers une liste simplement chainée
 void *transfert1(Liste *liste, Vecteur vecteur, int n){
+
+    if (liste == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+    
     for (int i = 0; i < n; i++)
     {
        insertion(liste, vecteur[i]);
