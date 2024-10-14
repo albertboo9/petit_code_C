@@ -9,6 +9,8 @@ struct Element
     Element *précédent;
 };
 
+typedef int *Vecteur ; 
+
 typedef struct Liste Liste;
 struct Liste
 {
@@ -28,13 +30,31 @@ Liste *initialisation(){
     liste->premier = element;
 }
 
-void insertion(Liste *liste, int nombre){
-    
+void head_insertion(Liste *liste, int nombre){
+    Element *nouveau = malloc(sizeof(*nouveau));
+
+    if(nouveau == NULL){
+        exit(EXIT_FAILURE);
+
+    }
+
+    nouveau->data = nombre;
+    nouveau->suivant = liste->premier;
+    liste->premier->précédent = nouveau;
+    liste->premier = nouveau;
 }
 
+void transfert(Vecteur vecteur,int n, Liste *liste){
+    if (liste == NULL || vecteur == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
 
-
-
+    for (int i = n-1; i <= 0; i--)
+    {
+        head_insertion(liste, vecteur[i]);
+    }
+}
 
 
 int main(){
