@@ -12,7 +12,7 @@ struct Element{
 // structure qui contiendra le premier élément de la liste simplement chainée
 typedef struct Liste Liste ;
 struct Liste{
-    Liste *premier;
+    Element *premier;
 };
 
 
