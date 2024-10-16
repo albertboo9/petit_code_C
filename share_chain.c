@@ -15,10 +15,9 @@ struct Liste{
     Element *premier;
 };
 
+typedef int* Vecteur; 
 
-typedef int *Vecteur; 
-
-// initialisation de notre liste chainée
+// initialisation de notre liste chainée  Liste l = initialisation()
 Liste *initialisation(){
     Liste *liste = malloc(sizeof(*liste));
     Element *element  = malloc(sizeof( *element));
@@ -49,20 +48,50 @@ void insertion(Liste *liste, int nombre){
 }
 
 // transfert des éléments d'un vecteur vers une liste simplement chainée
-void *transfert1(Liste *liste, Vecteur vecteur, int n){
+void transfert1(Liste *liste, int tab[], int n){
 
     if (liste == NULL)
     {
         exit(EXIT_FAILURE);
     }
     
-    for (int i = 0; i < n; i++)
+    for (int i = n-1; i >= 0; i--)
     {
-       insertion(liste, vecteur[i]);
+       insertion(liste, tab[i]);
     }
     
 }
+void afficher(Liste *liste, int n){
+    Element *element =malloc(sizeof(*element));
+
+    element = liste->premier;
+    for (int i = 0; i < n; i++)
+    {
+        printf(" %d ", element->data);
+        element= element->suivant;
+    }
+    
+
+}
 
 int main(){
+   
+    int n= 10;
+    int v[n];
+    Liste *liste = initialisation();
+
+
+    for (int i = 0; i < n; i++)
+    {
+        v[i]= i +1 ;
+    }
+
+    transfert1(liste, v, n);
+    afficher(liste, n);
+
+
+
+    
+
     return 0;
 }
