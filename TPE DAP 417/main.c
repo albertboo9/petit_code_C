@@ -144,7 +144,7 @@ int main() {
             default:
                 printf("Choix invalide. Veuillez réessayer.\n");
         }
-    } while (choix != 9);
+    } while (choix != 10);
 
     libererEDT(edt);
     return EXIT_SUCCESS;

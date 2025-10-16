@@ -1,0 +1,14 @@
+
+=== GESTION DE L'EMPLOI DU TEMPS ===
+1. Ajouter une séance
+2. Consulter mon EDT (Enseignant)
+3. Consulter mon EDT (Classe/Étudiant)
+4. Consulter EDT d'une salle
+5. Consulter EDT d'un département
+6. Consulter EDT par site et jour
+7. Consulter EDT journalier par campus
+8. Sauvegarder EDT
+9. Charger EDT
+10. Quitter
+Choix : Nom du fichier à charger : Emploi du temps chargé depuis sample_data.csv (19 séances)
+Chargement réussi.
