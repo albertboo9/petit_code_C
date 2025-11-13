@@ -1,8 +1,8 @@
-#include "gestion_edt.h"
+#include "../functions/gestion_edt.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-// Fonction pour initialiser un EmploiDuTemps vide
+// 1) Fonction pour initialiser un EmploiDuTemps vide
 EmploiDuTemps* initialiserEDT() {
     EmploiDuTemps* edt = (EmploiDuTemps*)malloc(sizeof(EmploiDuTemps));
     if (edt == NULL) {
@@ -15,7 +15,7 @@ EmploiDuTemps* initialiserEDT() {
     return edt;
 }
 
-// Fonction pour ajouter une séance à l'emploi du temps
+// 2) Fonction pour ajouter une séance à l'emploi du temps
 int ajouterSeance(EmploiDuTemps* edt, Seance* nouvelleSeance) {
     if (edt == NULL || nouvelleSeance == NULL) {
         return -1;  // Erreur : pointeurs nuls
@@ -48,7 +48,7 @@ int ajouterSeance(EmploiDuTemps* edt, Seance* nouvelleSeance) {
     return 0;  // Succès
 }
 
-// Fonction pour libérer la mémoire de l'emploi du temps
+// 3) Fonction pour libérer la mémoire de l'emploi du temps
 void libererEDT(EmploiDuTemps* edt) {
     if (edt == NULL) return;
 
@@ -59,7 +59,7 @@ void libererEDT(EmploiDuTemps* edt) {
     free(edt);
 }
 
-// Fonction auxiliaire pour afficher l'emploi du temps hebdomadaire trié par heure
+// 4) Fonction auxiliaire pour afficher l'emploi du temps hebdomadaire trié par heure
 void afficherEDTHebdomadaire(Seance** seances, int nbSeances, const char* titre) {
     if (nbSeances == 0) {
         printf("Aucune séance trouvée pour %s.\n", titre);
@@ -104,7 +104,7 @@ void afficherEDTHebdomadaire(Seance** seances, int nbSeances, const char* titre)
     printf("\n");
 }
 
-// Implémentations des fonctions de recherche (emploi du temps personnel hebdomadaire)
+// 5) Implémentations des fonctions de recherche (emploi du temps personnel hebdomadaire)
 void afficherEDTParEnseignant(EmploiDuTemps* edt, const char* enseignant) {
     if (edt == NULL || enseignant == NULL) return;
 
@@ -151,7 +151,7 @@ void afficherEDTParClasse(EmploiDuTemps* edt, const char* classe) {
     free(seancesFiltrees);
 }
 
-// Fonction pour saisir une nouvelle séance depuis l'utilisateur
+// 6) Fonction pour saisir une nouvelle séance depuis l'utilisateur
 Seance* saisirSeanceUtilisateur() {
     Seance* nouvelleSeance = (Seance*)malloc(sizeof(Seance));
     if (nouvelleSeance == NULL) {
@@ -329,7 +329,7 @@ void afficherEDTJournalierParCampus(EmploiDuTemps* edt, const char* campus, int 
     free(seancesFiltrees);
 }
 
-// Implémentations des fonctions de persistance (format CSV simple)
+// =============== Implémentations des fonctions de persistance (format CSV simple) =====================;
 // Fonction auxiliaire pour convertir le jour en string
 const char* jourToString(int jour) {
     const char* jours[] = {"LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"};

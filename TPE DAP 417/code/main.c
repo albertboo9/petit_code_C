@@ -1,4 +1,4 @@
-#include "gestion_edt.h"
+#include "../functions/gestion_edt.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

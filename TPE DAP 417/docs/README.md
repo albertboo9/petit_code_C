@@ -27,12 +27,12 @@ Un programme C modulaire pour la gestion et la diffusion de l'emploi du temps de
 
 ## Architecture
 
-Le projet suit une architecture modulaire avec séparation en fichiers `.h` et `.c` :
+Le projet suit une architecture modulaire avec séparation en fichiers `.h` et `.c` conserver respectivement dans les dossiers **functions** et **code** :
 
-- [`types.h`](types.h) : Définitions des structures de données
-- [`gestion_edt.h`](gestion_edt.h) : Déclarations des fonctions
-- [`gestion_edt.c`](gestion_edt.c) : Implémentations des fonctions
-- [`main.c`](main.c) : Programme principal avec menu interactif
+- [`types.h`](/functions/types.h) : Définitions des structures de données
+- [`gestion_edt.h`](/functions/gestion_edt.h) : Déclarations des fonctions
+- [`gestion_edt.c`](/code/gestion_edt.c) : Implémentations des fonctions
+- [`main.c`](/code/main.c) : Programme principal avec menu interactif
 
 ## Structures de Données
 
